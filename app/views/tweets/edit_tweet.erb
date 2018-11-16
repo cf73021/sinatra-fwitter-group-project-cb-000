@@ -1,5 +1,5 @@
 <h1>Update a Tweet:</h1>
-<% if User.is_logged_in?(session) %>
+<% if User.logged_in?(session) %>
 <form method="POST" action="/tweets/<%= @tweet.id %>/edit">
 
   <input type="hidden" name="_method" value="patch">
