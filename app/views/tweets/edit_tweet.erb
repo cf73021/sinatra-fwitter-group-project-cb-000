@@ -1,5 +1,5 @@
 <h1>Update a Tweet:</h1>
-<% if User.logged_in?(session) %>
+
 <form method="POST" action="/tweets/<%= @tweet.id %>/edit">
 
   <input type="hidden" name="_method" value="patch">
@@ -10,4 +10,3 @@
    <p><input type="submit" id="submit" value="Update Tweet"></p>
 
 </form>
-<% end %>
