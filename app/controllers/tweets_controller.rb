@@ -65,3 +65,5 @@ class TweetsController < ApplicationController
           end
         end
       end
+      redirect to '/tweets'
+end
