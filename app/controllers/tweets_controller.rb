@@ -57,7 +57,7 @@ class TweetsController < ApplicationController
   patch '/tweets/:id/edit' do
     if User.logged_in?(session)
       user = User.current_user(session)
-      tweet = Tweet.find(params[:id])
+      tweet = Tweet.find_by(id: params[:id])
 
       if tweet && user.id == tweets.user.id
         tweet.content = params[:content]
